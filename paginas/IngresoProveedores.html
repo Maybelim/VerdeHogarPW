@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilo/etilos2.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="text-center">Proveedores</h1>
+        <img src="../imagenes/logo.jpg" alt="Imagen" title="Verde hogar" id="img"> 
+    </header>
+    <div class="container">
+        <form >
+       
+            <br>
+            <label for="idCodigoProveedor">Código</label>
+            <input type="number" class="form-control" id="idCodigoProveedor" name="txtCodigo">
+            <br>
+            <label for="idNombreProveedor">Nombre</label>
+            <input type="text" class="form-control" id="idNombreProveedor" name="txtNombre">
+            
+            <br>
+            <label for="idDireccionProveedor">Dirección</label>
+            <input type="text" class="form-control" id="idDireccionProveedor" name="txtDireccion">
+            <br>
+           
+            <br>
+            <label for="idTelefonoProveedor">Teléfono</label>
+            <input type="number" class="form-control" id="idTelefonoProveedor" name="txtTelefono">
+            <br>
+
+            <br>
+            <label for="idEmailProveedor">Email</label>
+            <input type="email" class="form-control" id="idEmailProveedor" name="txtEmail">
+            <br>  
+            
+            <br>
+            <input type="button" value="Guardar" class="btn btn-success"  onclick="addProveedores()">
+            <br>
+            <br>
+            <table class="table table-bordered table-striped" id="tabla">
+                <thead style="background-color: rgb(10, 80, 68); color: white;">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody id="idTablaProveedores">
+                   
+                </tbody>
+            </table>
+
+        </form>
+           
+        
+    </div>
+    <footer class="footer">
+        <p>Santa María Ixhuatán, Santa Rosa</p>
+        <p>Guatemala</p>
+        <p>Tel. 52830385</p>
+        <p>Contactanos via: email</p>
+    </footer>
+     
+   
+    <script src="../JS/proveedores.js"></script>
+    <script> 
+    cargarDatosProveedores();
+    LlenarTablaProveedor();
+    
+    </script>
+
+</body>
+
+</html>

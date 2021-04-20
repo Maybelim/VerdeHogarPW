@@ -1,0 +1,345 @@
+*{
+    padding: 0px;
+    margin: 0px;
+} /*Utilicé un selector universal, el cual aplicará los estilos a la página en general.*/
+
+/*contenedor para dividir la grid*/
+.contenedor,.contenedor2{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100px 1fr 100px;
+}
+/*Utilicé selectores tipo clase, donde invoque la clase en el archivo html ahí se aplicará el estilo*/
+
+.header{
+    background-color: greenyellow;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.header img{
+    border-radius: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100%;
+}
+
+/*esta es la barra de navegacion*/
+.nav{
+    background-color: greenyellow;
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: right;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 30px;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+.nav a:hover{
+    padding: 20px;
+    background-color: seagreen;
+    color: white;
+}
+
+/*este es el main principal*/
+.main{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.main h2{
+    margin-top: 50px;
+    text-align: center;
+}
+.main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 70%;
+    height: 300px;
+}
+
+.main section{
+    margin-top: 30px;
+}
+article p, article b{
+    text-align: justify;
+}
+
+/*esta es la barra lateral*/
+.aside{
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+}
+
+.logo img{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.menu {
+    display: block;
+    background-color:  rgb(169, 224, 183);
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+.menu li,.menu h3 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    list-style: none;
+}
+
+.menu ul{
+    height: 100px;
+}
+
+.menu li{
+    height: 50pxs;
+}
+.menu a{
+    text-decoration: none;   
+    color: black;
+    font-family: 'Tahoma';
+}
+
+.menu a:hover{
+    background-color: seagreen;
+    color: white;
+}
+
+.table {
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.t_precio{
+    width: 30%;
+    
+}
+
+td{    
+    padding: 40px;
+} /*Apliqué un selector tipo elemento, los estilos se agregaran al elemento indicado*/
+
+.table{
+    width: 100%;
+}
+.table tr{
+    border: solid 5px  rgb(169, 224, 183);
+}
+
+.table img{
+    height: 80px;
+    width: 40%;
+}
+
+
+.table tr:hover {
+    background-color: gray;
+    padding: 10px;
+    color: white;
+}
+
+.tabla {
+    margin-top: 50px;
+    background-color: rgb(245, 233, 233);
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%  
+}
+.tabla tr{
+    border: solid 10px  rgb(169, 224, 183);
+}
+.tabla img{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 4%;
+}
+
+.precio{
+    padding-top: 50%;
+    width: 30%;
+}
+/*footer*/
+.footer {
+    margin-top: 20px;
+    background-color: greenyellow;
+    grid-column: 1/spand 2;
+    grid-row: 3;
+    padding: 25px; 
+}
+.footer p{
+    text-align: center;
+    font-size: 12px;
+}
+
+/*estilos para login y del registro*/
+
+.header_log{
+    background-color: greenyellow;
+    grid-column: 1 /span 2;
+    grid-row: 1;
+}
+
+.mainform{
+    display: grid;
+    background: url(../imagenes/fondo2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    grid-column: 1 /span 2;
+    grid-row: 2;
+    padding: 30px;
+    justify-content: center;
+}
+
+.footer_log{
+    background-color: greenyellow;
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    text-align: center;
+}
+.header_log h1{
+    text-align: center;
+}
+.contenedorForm{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formulario{
+    background: rgba(4, 26, 7, 0.575);
+    margin: 10%;
+    padding: 5px;
+    color: white;
+}
+h4{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.input{
+    display: grid;
+    font: size 10;
+    width: 83%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 15px;
+    line-height: 15px;
+    justify-content: center;
+}
+
+.input input{
+    padding: 7px;
+}
+
+.button{
+    margin-bottom: 15px;
+    background-color: rgb(99, 250, 174);
+    border: 1px solid rgb(68, 255, 43);
+    padding: 10px;
+    display: grid;
+    grid-gap: 15px;
+    line-height: 15px;
+}
+
+.button:hover {
+    background-color: rgb(70, 250, 15);
+    color: white;
+}
+#link{
+    text-decoration: none;
+    color: blue;
+}
+#link:hover{
+    color: red;
+}
+
+/*Acá inicia la media queri para que la pagina sea reponsiva en una pantalla que tenga como máximo 600px, se modifica
+la estructura de la página y del formulario.*/
+@media (max-width: 600px){
+
+    .contenedor{
+        grid-template-rows: 100px minmax(100px, 500px) 1fr 100px;
+    }
+
+    .main{
+        grid-column: 1 /span 2;
+        grid-row: 3;
+        margin-top: 0px;
+    }
+
+    .aside{
+        grid-column: 1 /span 2;
+    }
+
+    .footer{
+        grid-row: 4;
+    }
+
+    .table img{
+        width: 100px;
+    }
+
+    .table td{
+        padding: 0px;
+    }
+
+    .tabla img{
+        height: 200px;
+    }
+
+    .precio{
+        width: 40%;
+    }
+
+    .formulario{ 
+        margin: auto;
+        width: 400px;
+        border-radius: 2%;
+     }
+}
+
+/* estilos para catalogo de productos*/
+
+#boton{
+    background-color: rgb(106, 252, 179);
+    border: solid   rgb(59, 173, 116);
+    padding: 10px;
+}

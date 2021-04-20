@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilo/etilos2.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="text-center">Catálogo de Productos</h1>
+        <img src="../imagenes/logo.jpg" alt="Imagen" title="Verde hogar" id="img">
+        <nav class="nav">
+            <ul>
+                <li> <a href="login.html" target="_blank"> Login</a></li>
+                <li> <a href="IngresoProveedores.html" target="_blank"> Proveedores</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form >
+            <br>
+            <label for="idCodigo">Código</label>
+            <input type="number" class="form-control" id="idCodigo" name="txtCodigo">
+            <br>
+            <label for="idNombre">Nombre</label>
+            <input type="text" class="form-control" id="idNombre" name="txtNombre">
+            
+            <br>
+            <label for="idPrecio">Precio</label>
+            <input type="number" class="form-control" id="idPrecio" name="txtPrecio">
+            <br>
+            <label for="idImagen">Imagen</label>
+            <input type="file" class="InsertImg" id="idImagen" name="txtImagen" onchange="previewFile()">
+            <img src="" alt="Imagen Privia" id="idImagenPrevia">
+            
+            
+            <br>
+            <input type="button" value="Guardar" class="btn btn-success"  onclick="addProducto(), llenarListaProductos()">
+            <br>
+            <br>
+            <table class="table table-bordered table-striped" id="tabla">
+                <thead style="background-color: rgb(10, 80, 68); color: white;">
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Existencias</th>
+                    </tr>
+                </thead>
+
+                <tbody id="idTableBody">
+                   
+                </tbody>
+            </table>
+
+        </form>
+           
+        
+    </div>
+    <footer class="footer">
+        <p>Santa María Ixhuatán, Santa Rosa</p>
+        <p>Guatemala</p>
+        <p>Tel. 52830385</p>
+        <p>Contactanos via: email</p>
+    </footer>
+     
+   
+    <script src="../JS/catalogo.js"></script>
+    <script> 
+    cargarDatos();
+    LlenarTabla();
+    
+    </script>
+
+</body>
+
+</html>

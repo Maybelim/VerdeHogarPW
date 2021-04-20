@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden de Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilo/etilos2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Orden de Compra</h1>
+        <img src="../imagenes/logo.jpg" alt="Imagen" title="Verde hogar" id="img">
+        <nav class="nav">
+            <ul>
+                <li><a href="login.html" target="_blank">Login</a></li>
+                <li><a href="estado.html" target="_blank">Estado</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <form >
+            <br>
+            <label for="idNoOrden">No. de Orden</label>
+            <input type="number" class="form-control" id="idNoOrden" name="txtNoOrden">
+            <br>
+            <label for="idFechaOrden">Fecha</label>
+            <input type="date" class="form-control" id="idFechaOrden" name="txtFechaOrden">
+            <br>
+            <label for="id">Proveedor</label>
+            <select name="ProveedorOrden" id="idProveedoresOrden"></select>
+            <br>
+            <br>
+            <h2>Ingresar Productos</h2>
+            <br>
+            <label for="idProductoOrden">Producto</label>
+            <select name="ProductoOrden" id="idProductoOrden">
+    
+            </select>
+            <br>
+            <label for="id">Cantidad</label>
+            <input type="number" class="form-control" id="idCantidadOrden" name="txtCantidadOrden">
+            <br>
+            <label for="id">Precio de Unidad</label>
+            <input type="number" class="form-control" id="idPrecioOrden" name="txtPrecioOrden">
+            <br>
+        
+            <input type="button" value="Guardar" class="btn btn-success"  onclick="addDetalle()">
+            <br>
+            <br>
+            <table class="table table-bordered table-striped" id="tabla">
+                <thead style="background-color: rgb(10, 80, 68); color: white;">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unidad</th>
+                        <th>Sub total</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="idTablaDetalle">
+                   
+                </tbody>
+               
+
+            </table>
+            <div>
+               <br>
+               <p>
+                <label id="totalOrden"></label>     
+               </p>
+             
+            </div>
+            <div id = "idDivOrden"> 
+            </div>
+            
+            
+        </form>
+           
+        
+    </div>
+    <footer class="footer">
+        <p>Santa María Ixhuatán, Santa Rosa</p>
+        <p>Guatemala</p>
+        <p>Tel. 52830385</p>
+        <p>Contactanos via: email</p>
+    </footer>
+     
+   
+    <script src="../JS/catalogo.js"></script>
+     <script>    
+      LlenarListaProductos();
+    </script>
+    <script src= "../JS/detalle.js"></script>
+    <script> 
+     cargarDatosDetalle();
+     LlenarTablaDetalle();
+    </script>
+    
+    <script src = "../JS/proveedores.js"></script>
+     <script>
+         LlenarListaProveedores();
+    </script>
+
+    <script src = "../JS/ordenCompra.js"></script>
+</body>
+
+</html>

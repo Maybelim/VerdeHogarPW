@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <div class="contenedor2">
+        <header class="header_log">
+            <h1>Bienvenido</h1>
+        </header>
+       </nav>
+       <main class="mainform">
+         <form action="" class="formulario">
+             <div class="contenedorForm">
+                    <h4>Bienvenido</h4>
+                   <div class="input">
+                     <input type="text" name="txtNombre" id="IdNombre"
+                            required placeholder="Nombre de Usuario">
+                   </div>
+
+                  <div class="input">
+                      <input type="password" id="idContraseña" 
+                            name="Contraseña" required
+                            placeholder="Contraseña">
+                  </div>
+  
+                 <div class="input">
+                  <input type="checkbox" >
+                  <label for="checkbox" style="grid-column:2">Recordar Usuario </label>
+                 </div>
+                  <div class="input">
+                  <button type="button" class="button" onclick="loginUsuario()">Login</button>
+                  <p>¿No tiene cuenta aún?<a id="link" href="../paginas/registro.html" >Registrate</a></p>
+                   </div>
+             </div>
+         </form>
+       </main>
+       <footer class="footer_log">
+        <p>Santa María Ixhuatán, Santa Rosa</p>
+        <p>Guatemala</p>
+        <p>Tel. 52830385</p>
+        <p>Contactanos via: email</p>
+      </footer>
+
+    </div>
+
+  <script src="../JS/login.js"></script>
+</body>
+</html>

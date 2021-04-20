@@ -1,0 +1,170 @@
+/*Estilos para las siguientes paginas: productos, catalogo de productos*/
+.header{
+    display: grid;
+    background-color: rgba(172, 255, 47, 0.432);
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#titulo{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#img{
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+}
+.header img{
+    border-radius: 50%;
+}
+#nav{
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+#nav img{
+    border-radius: 60%;
+    height: 70px;
+}
+
+
+#nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+.nav{
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: right;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 30px;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+.nav a:hover{
+    padding: 20px;
+    background-color: seagreen;
+    color: white;
+}
+
+#tabla img{
+    height: 100px;
+    width: 100px;
+    margin-left: 30%;
+}
+
+.InsertImg{
+    padding: 10px;
+    margin: 3%;
+    text-decoration: none;
+}
+#idImagenPrevia{
+   
+    height: 100px;
+    width: 100px;
+} 
+
+
+
+.footer{
+    background-color: rgba(172, 255, 47, 0.432);
+    padding: 10px;
+}
+.footer p{
+    padding: 0%;
+    margin: 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*Estilos para la tabla de productos*/
+
+.tbody img{
+    height: 100px;
+    width: 100px;
+    margin-left: 30%;
+}
+
+.tbody input{
+    width: 50px;
+    margin-top: 10px;
+}
+.tbody label, .tbody button {
+    margin-top: 10px;
+}
+
+
+/* para carrito*/
+
+.cdiv img{
+    height: 30px;
+    width: 30px;
+}
+.mas{
+    background-color: rgba(224, 40, 40, 0.815);
+    color: white;
+}
+.menos{
+    background-color: rgba(83, 83, 78, 0.582);
+    color: white
+}
+.tdright{
+    text-align: right;
+}
+
+th{
+    text-align: center;
+}
+div a, div p{
+    color: black;
+    text-align: right;
+}
+
+.pdiv button{
+    margin-left: 90%;
+    margin-bottom: 2%;
+
+}
+/* Media Query */
+@media (max-width: 800px)
+{
+    .tbody img{
+        margin-left:3%;
+    }
+    .tbody button{
+        width: 60 px;
+    }
+    .cdiv img{
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+    .pdiv button{
+        margin-left: 80%;
+    }
+}
